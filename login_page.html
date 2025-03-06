@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: #331842;
+            margin: 0;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 350px;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            height: auto;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: white;
+            font-family: Arial;
+            margin: 0 0 20px 0;
+        }
+
+        .card {
+            margin: 20px 0;
+            text-align: left;
+            color: white;
+            font-size: 13.5px;
+        }
+
+        .input-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .input-container img {
+            position: absolute;
+            left: 10px;
+            top: 60%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+        }
+
+        .subcard {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            box-sizing: border-box;
+            background: rgb(230, 212, 212);
+            color: black;
+        }
+
+        .subcard::placeholder {
+            color: black;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            font-weight: bolder;
+            color: #e9e3ecf3;
+            cursor: pointer;
+            font-size: 14px;
+            background: linear-gradient(to right, rgb(110, 172, 243), rgb(71, 71, 172));
+            transition: 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.04);
+        }
+
+        p {
+            color: white;
+            font-size: 13.5px;
+            margin: 10px 0 0 0;
+        }
+
+        p a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -5px;
+        }
+
+        .options label {
+            color: white;
+            font-size: 13.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .options label input {
+            margin-right: 8px;
+        }
+
+        .options a {
+            color: white;
+            text-decoration: none;
+            font-size: 13.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="login-card">
+        <h2>Login</h2>
+
+        <div class="card">
+            <label for="username">Username</label>
+            <div class="input-container">
+                <img src="Images/username.png" alt="User icon" />
+                <input class="subcard" type="text" id="username" placeholder="Enter your username" />
+            </div>
+        </div>
+
+        <div class="card">
+            <label for="pass">Password</label><br />
+            <div class="input-container">
+                <img src="Images/padlock.png" alt="Password icon" />
+                <input class="subcard" type="password" id="pass" placeholder="Enter your password" />
+            </div>
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox" />
+                Remember me
+            </label>
+            <a href="#">Forget Password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#">Register</a></p>
+    </form>
+</body>
+
+</html>
